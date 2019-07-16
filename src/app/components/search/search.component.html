@@ -1,1 +1,21 @@
-<p>search works!</p>
+
+<h1>Encuentra tu musica favorita aqui...</h1>
+
+<div class="row mb-3">
+    <div class="col">
+        <input #artist type="text" (keyup)="buscar(artist.value)" class="form-control" placeholder="Buscar Artista...">
+    </div>
+</div>
+
+<div class="card-columns">
+        <div *ngFor="let album of busquedaArtist" class="card">
+            <img [src]="album.images[0].url" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ album.name }}</h5>
+                <h2 class="h6 text-dark">Género</h2>
+                <p class="card-text"> 
+                    <span *ngFor="let genero of album.genres" class="badge badge-pill badge-info">{{ genero }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
