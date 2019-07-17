@@ -16,9 +16,12 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistsComponent } from './components/artists/artists.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { CardsComponent } from './components/shared/cards/cards.component';
 
 //Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+
 
 
 
@@ -29,7 +32,9 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     SearchComponent,
     ArtistsComponent,
     NavbarComponent,
-    NoimagePipe
+    NoimagePipe,
+    CardsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

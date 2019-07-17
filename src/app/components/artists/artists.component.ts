@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-artists',
   templateUrl: './artists.component.html',
   styleUrls: ['./artists.component.css']
 })
-export class ArtistsComponent implements OnInit {
+export class ArtistsComponent {
 
-  constructor() { }
+  constructor( private activatedroute: ActivatedRoute ) {
 
-  ngOnInit() {
-  }
+      this.activatedroute.params.subscribe( params => console.log( params[ 'id' ] ) )
 
+   }
+
+ 
+  
 }
